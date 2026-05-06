@@ -1,0 +1,16 @@
+name: rodar-codigo
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  rodar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repo
+        uses: actions/checkout@v3
+
+      - name: Rodar código
+        run: python main.py
